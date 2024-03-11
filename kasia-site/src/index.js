@@ -4,6 +4,10 @@ import ErrorPage from "./error-page";
 import './index.css';
 import App from './App';
 import Contact from './components/Contact.js';
+import Gallery from './components/Gallery.js';
+import Menus from './components/Menus.js';
+import About from './components/About.js';
+import LandingPage from './components/LandingPage.js';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter,
@@ -21,7 +25,29 @@ const router = createBrowserRouter([
         path:'contact',
         element: <Contact />,
         errorElement: <ErrorPage />
-      }]
+      },
+      {
+        path:'gallery',
+        element: <Gallery />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path:'about',
+        element: <About />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path:'menus',
+        element: <Menus />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path:'landing',
+        element: <LandingPage />,
+        errorElement: <ErrorPage />
+      }
+
+    ]
   }
 
   
