@@ -1,16 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import ErrorPage from "./error-page";
-import './index.css';
-import App from './App';
-import Contact from './components/Contact.js';
-import Gallery from './components/Gallery.js';
-import Menus from './components/Menus.js';
-import About from './components/About.js';
-import LandingPage from './components/LandingPage.js';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import Root from './routes/Root';
+import ErrorPage from "./error-page";
+import LandingPage from './routes/LandingPage';
+import './index.css';
 import {
-  BrowserRouter,
+  // BrowserRouter,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
@@ -18,34 +14,10 @@ import {
 const router = createBrowserRouter([
   { 
     path: '/',
-    element: <App />,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [ 
-      {
-        path:'contact',
-        element: <Contact />,
-        errorElement: <ErrorPage />
-      },
-      {
-        path:'gallery',
-        element: <Gallery />,
-        errorElement: <ErrorPage />
-      },
-      {
-        path:'about',
-        element: <About />,
-        errorElement: <ErrorPage />
-      },
-      {
-        path:'menus',
-        element: <Menus />,
-        errorElement: <ErrorPage />
-      },
-      {
-        path:'landing',
-        element: <LandingPage />,
-        errorElement: <ErrorPage />
-      }
+      {index: true, element: <LandingPage />},
 
     ]
   }
