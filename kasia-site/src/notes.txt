@@ -1,3 +1,6 @@
-3/17/23:
+3/17/24:
 
 Worked on a separate tutorial for BrowswerRouter and now I need to finish connecting the BrowswerRouter throughout site for Kasia
+
+3/18/24:
+-completed all routing for navigation bar and logo/landing page

@@ -4,6 +4,10 @@ import reportWebVitals from './reportWebVitals';
 import Root from './routes/Root';
 import ErrorPage from "./error-page";
 import LandingPage from './routes/LandingPage';
+import About from './routes/About';
+import Contact from './routes/Contact';
+import Gallery from './routes/Gallery';
+import Menus from './routes/Menus';
 import './index.css';
 import {
   // BrowserRouter,
@@ -18,7 +22,26 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [ 
       {index: true, element: <LandingPage />},
-
+      {
+        path: "LandingPage",
+        element: <LandingPage />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "menus",
+        element: <Menus />,
+      },
     ]
   }
 
