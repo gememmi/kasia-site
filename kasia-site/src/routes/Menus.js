@@ -1,9 +1,8 @@
-function Menus(){
+export default function Menus(){
     return(
-        <div>
+        <div id="menus">
             Menus
         </div>
     )
 };
 
-export default Menus;

@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import Root from './routes/Root';
 import ErrorPage from "./error-page";
-import LandingPage from './routes/LandingPage';
+import Home from './routes/Home';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Gallery from './routes/Gallery';
@@ -21,10 +21,10 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [ 
-      {index: true, element: <LandingPage />},
+      {index: true, element: <Home />},
       {
-        path: "LandingPage",
-        element: <LandingPage />,
+        path: "home",
+        element: <Home />,
       },
       {
         path: "about",

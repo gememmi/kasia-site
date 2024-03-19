@@ -1,4 +1,4 @@
-function ContactForm(){
+export default function ContactForm(){
     return(
         <div>
             ContactForm
@@ -6,4 +6,3 @@ function ContactForm(){
     )
 };
 
-export default ContactForm;

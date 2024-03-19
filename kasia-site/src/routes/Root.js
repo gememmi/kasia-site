@@ -6,7 +6,7 @@ function Root() {
 
   return (
     <div id="topbar">
-      <Link to= {"landingpage"}>
+      <Link to= {"home"}>
         <img src={logo} alt="dinner play and knife logo with K L" />
       </Link>
 

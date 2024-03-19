@@ -4,3 +4,5 @@ Worked on a separate tutorial for BrowswerRouter and now I need to finish connec
 
 3/18/24:
 -completed all routing for navigation bar and logo/landing page
+-worked on filling out About page with content
+    -used Tiinyhost for hosting the pdf of her "resume"

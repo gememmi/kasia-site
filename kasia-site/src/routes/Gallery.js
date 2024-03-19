@@ -1,9 +1,7 @@
-function Gallery(){
+export default function Gallery(){
     return(
-        <div>
+        <div id="gallery">
             Gallery
         </div>
     )
 };
-
-export default Gallery
