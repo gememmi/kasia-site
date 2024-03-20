@@ -1,20 +1,18 @@
 
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import reportWebVitals from './reportWebVitals';
 import Root from './routes/Root';
 import './index.css';
 import { BrowserRouter,} from "react-router-dom";
 
-ReactDOM.render(
-  
-  <React.StrictMode>
-    <BrowserRouter>
-    <Root />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+  <Root tab="/home"/>
+)
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

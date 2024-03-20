@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from "/Users/emilydaniels/Development/code/post-grad/kasia-site/src/images/logo-white.png";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ErrorPage from "/Users/emilydaniels/Development/code/post-grad/kasia-site/src/error-page.js";
 import About from "./About";
 import Gallery from "./Gallery";
 import Menus from "./Menus";
 import Contact from "./Contact";
+import Home from "./Home";
 
 function Root() {
   
@@ -18,33 +18,38 @@ function Root() {
   };
 
   return (
-    <div id="topbar">
-      <Link onClick={() => scrollToSection('home')} to= {"home"}>
+    <Router>
+    <div id="home">
+      <header>
+      <Link onClick={() => scrollToSection('home')} to="/home">
         <img src={logo} alt="dinner play and knife logo with K L" />
       </Link>
 
-      <nav>
-        <NavLink>
-          <Link onClick={() => scrollToSection('about')} to={"about"}>ABOUT</Link>
-        </NavLink>
-        <NavLink>
-          <Link onClick={() => scrollToSection('gallery')} to={"gallery"}>GALLERY</Link>
-        </NavLink>
-        <NavLink>
-          <Link onClick={() => scrollToSection('menus')}  to={"menus"}>MENUS</Link>
-        </NavLink>
-        <NavLink>
-          <Link onClick={() => scrollToSection('contact')}  to={"contact"}>CONTACT</Link>
-        </NavLink>
+      <nav className="navbar">
+        <ul className="navbar">
+        <li><Link onClick={() => scrollToSection('about')} to="/about" className="nav-link">ABOUT</Link></li>
+        <li><Link onClick={() => scrollToSection('gallery')} to="/gallery" className="nav-link">GALLERY</Link></li>
+        <li><Link onClick={() => scrollToSection('menus')} to="/menus" className="nav-link">MENUS</Link></li>
+        <li><Link onClick={() => scrollToSection('contact')} to="/contact" className="nav-link">CONTACT</Link></li>
+        </ul>
       </nav>
+      </header>
       <Routes>
-          <Route path="/about" component={About} />
-          <Route path="/gallery" component={Gallery} />
-          <Route path="/menus" component={Menus} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/error" component={ErrorPage} />
+        <Route path="/home" element={<Home />}/>
+          <Route path="/about" element={<About/>} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/menus" element={<Menus />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/error" element={<ErrorPage />} />
         </Routes>
+        <Home/>
+        <About />
+        <Gallery />
+        <Menus />
+        <Contact />
     </div>
+    </Router>
+    
   );
 }
 
