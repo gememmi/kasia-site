@@ -1,5 +1,5 @@
 import kasia from '/Users/emilydaniels/Development/code/post-grad/kasia-site/src/images/kasia.png';
-import food from '/Users/emilydaniels/Development/code/post-grad/kasia-site/src/images/food.png'
+import food from '/Users/emilydaniels/Development/code/post-grad/kasia-site/src/images/food.png';
 
 export default function Gallery(){
     return(
